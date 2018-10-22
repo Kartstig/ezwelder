@@ -3929,6 +3929,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="78*" device="TV" package3d_urn="urn:adsk.eagle:package:16417/1" technology="05"/>
 <part name="TRIM" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="LCD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="RELAY" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -3956,6 +3957,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="IC2" gate="A1" x="76.2" y="86.36"/>
 <instance part="TRIM" gate="A" x="162.56" y="35.56"/>
 <instance part="LCD" gate="A" x="195.58" y="35.56"/>
+<instance part="RELAY" gate="A" x="127" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -4011,6 +4013,11 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="LCD" gate="A" pin="2"/>
 <wire x1="193.04" y1="35.56" x2="185.42" y2="35.56" width="0.1524" layer="91"/>
 <label x="185.42" y="35.56" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RELAY" gate="A" pin="1"/>
+<wire x1="124.46" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
+<label x="114.3" y="86.36" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4210,6 +4217,11 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <wire x1="193.04" y1="38.1" x2="185.42" y2="38.1" width="0.1524" layer="91"/>
 <label x="185.42" y="38.1" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="RELAY" gate="A" pin="2"/>
+<wire x1="124.46" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
+<label x="114.3" y="83.82" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="RESET" class="0">
 <segment>
@@ -4225,6 +4237,18 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="SW2" gate="1" pin="P"/>
 <wire x1="93.98" y1="25.4" x2="101.6" y2="25.4" width="0.1524" layer="91"/>
 <junction x="93.98" y="25.4"/>
+</segment>
+</net>
+<net name="OC1B" class="0">
+<segment>
+<pinref part="ATMEGA328P" gate="G$1" pin="16"/>
+<wire x1="50.8" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+<label x="53.34" y="20.32" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RELAY" gate="A" pin="3"/>
+<wire x1="124.46" y1="81.28" x2="114.3" y2="81.28" width="0.1524" layer="91"/>
+<label x="114.3" y="81.28" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
